@@ -1,24 +1,24 @@
 import React from "react";
 
-function EmployeeRow(props) {
+function TableHeader(props) {
     return (
       <>
       <div className="row">
       <div className="col-md-2">
-          <img src={props.image} alt={props.firstName}/>
+          <h4>Photo</h4>
       </div>
       <div className="col-md-4">
-    <p>{props.firstName} {props.lastName}</p>
+      <h4>Name</h4><button type="button" className="btn btn-outline-info" id="sort-by-name" onClick={props.sortByName}>^</button>
       </div>
       <div className="col-md-4">
-          <p>{props.email}</p>
+      <h4>Email</h4>
       </div>
       <div className="col-md-2">
-          <p>{props.birthday}</p>
+      <h4>Age</h4>
       </div>
       </div>
       </>
     );
   }
   
-  export default EmployeeRow;
+  export default TableHeader;

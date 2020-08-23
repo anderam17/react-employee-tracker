@@ -1,0 +1,15 @@
+#name-col{
+    display: flex;
+    flex-wrap: wrap;
+}
+h4{
+    margin-right: 10px;
+}
+.header-titles{
+    display: flex;
+    justify-content: center;
+    border: solid medium rgb(98, 190, 159);
+    border-radius: 30px;
+
+}
+

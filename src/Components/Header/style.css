@@ -1,0 +1,11 @@
+.jumbotron{
+background: rgb(20, 175, 136) !important;
+}
+#big-title{
+    font-size: 90px;
+    font-family: 'Bebas Neue', cursive;
+}
+#big-subtitle{
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}

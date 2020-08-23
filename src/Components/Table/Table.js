@@ -1,7 +1,7 @@
 import React from "react";
-import EmployeeRow from "./EmployeeRow";
-import API from "../utils/api";
-import TableHeader from "./TableHeader"
+import EmployeeRow from "../EmployeeRow/EmployeeRow";
+import API from "../../utils/api";
+import TableHeader from "../TableHeader/TableHeader"
 //import react + employee row
 //for each employee, print out a row
 
@@ -30,10 +30,9 @@ class Table extends React.Component {
         return 0;
       });
       this.setState({ employee: sortedEmployees })
-  }
+  };
 
   renderContent = () => {
-    console.log(this.state.employees);
     return this.state.employees.map((employee) => {
       return (
         <EmployeeRow
@@ -42,7 +41,7 @@ class Table extends React.Component {
           lastName={employee.name.last}
           email={employee.email}
           birthday={employee.dob.age}
-          image={employee.picture.thumbnail}
+          image={employee.picture.medium}
         />
       );
     });

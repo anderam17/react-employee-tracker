@@ -1,0 +1,15 @@
+p {
+    line-height: 25px;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+img{
+    margin-left: 10px;
+}
+.row{
+    margin-bottom: 10px;
+}
+.employee-info{
+    display: flex;
+    justify-content: center;
+}

@@ -17,6 +17,7 @@ function TableHeader(props) {
       </div>
       <div className="col-md-2 header-titles">
       <h4>AGE</h4>
+      <button type="button" className="btn btn-outline-dark" id="sort-by-age" onClick={props.sortByAge}>^</button>
       </div>
       </div>
       </>

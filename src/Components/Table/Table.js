@@ -37,6 +37,20 @@ class Table extends React.Component {
       this.setState({ employee: sortedEmployees })
   };
 
+  sortByAge = () => {
+    let sortedEmployees = this.state.employees;
+    sortedEmployees.sort((a, b) => {
+      if (a.dob.age < b.dob.age) {
+        return -1;
+      }
+      if (a.dob.age > b.dob.age) {
+        return 1;
+      }
+      return 0;
+    });
+    this.setState({ employee: sortedEmployees })
+};
+
   renderContent = () => {
     return this.filterBySearch().map((employee) => {
       return (
@@ -57,6 +71,7 @@ class Table extends React.Component {
       <div>
         <TableHeader 
         sortByName = {() => this.sortByName()}
+        sortByAge = {() => this.sortByAge()}
         />
         {this.renderContent()}
       </div>

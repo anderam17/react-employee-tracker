@@ -2,8 +2,6 @@ import React from "react";
 import EmployeeRow from "../EmployeeRow/EmployeeRow";
 import API from "../../utils/api";
 import TableHeader from "../TableHeader/TableHeader"
-//import react + employee row
-//for each employee, print out a row
 
 class Table extends React.Component {
   state = {
@@ -16,6 +14,13 @@ class Table extends React.Component {
         this.setState({ employees: res.data.results });
       })
       .catch((err) => console.log(err));
+  };
+
+  filterBySearch = () => {
+    return this.state.employees.filter((employee) => {
+      const fullName = `${employee.name.first.toLowerCase()} ${employee.name.last.toLowerCase()}`;
+      return fullName.startsWith(this.props.searchTerm.toLowerCase());
+    });
   };
 
   sortByName = () => {
@@ -33,7 +38,7 @@ class Table extends React.Component {
   };
 
   renderContent = () => {
-    return this.state.employees.map((employee) => {
+    return this.filterBySearch().map((employee) => {
       return (
         <EmployeeRow
           key={employee.login.uuid}

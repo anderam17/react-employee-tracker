@@ -8,4 +8,5 @@ background: rgb(20, 175, 136) !important;
 #big-subtitle{
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
+    line-height: 40px;
 }

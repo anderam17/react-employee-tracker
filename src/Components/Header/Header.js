@@ -8,7 +8,11 @@ function Header(props) {
     <div className="jumbotron jumbotron-fluid">
     <div className="container">
       <h1 className="display-4" id="big-title">Employee Search</h1>
-      <p className="lead" id="big-subtitle"> Search Employees by name or filter by clicking on "name" column heading</p>
+      <p className="lead" id="big-subtitle"> Search Employees by entering their first or full name in the search box. 
+      <br/> 
+      Filter by name by clicking the arrow in "name" column.
+      <br/> 
+      Filter by age by clicking the arrow in the "age" column. </p>
       <Search updateSearchTerm={props.updateSearchTerm} />
     </div>
   </div>

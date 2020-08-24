@@ -18,8 +18,8 @@ class Table extends React.Component {
 
   filterBySearch = () => {
     return this.state.employees.filter((employee) => {
-      const fullName = `${employee.name.first.toLowerCase()} ${employee.name.last.toLowerCase()}`;
-      return fullName.startsWith(this.props.searchTerm.toLowerCase());
+      return (employee.name.first.toLowerCase().startsWith(this.props.searchTerm.toLowerCase()) || 
+      employee.name.last.toLowerCase().startsWith(this.props.searchTerm.toLowerCase()));
     });
   };
 
